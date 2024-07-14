@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dnkiedtuaggo8"]
+[gd_scene load_steps=29 format=3 uid="uid://dnkiedtuaggo8"]
 
 [ext_resource type="Texture2D" uid="uid://daoi60guy2euw" path="res://assets/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png" id="1_sblvw"]
 [ext_resource type="Script" path="res://entities/player.gd" id="1_x5m2o"]
@@ -263,9 +263,6 @@ animation = &"double_jump"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2tsxr"]
 animation = &"jump_start"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bikeu"]
-animation = &"land"
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ykplm"]
 advance_mode = 2
 
@@ -273,13 +270,7 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2b3ho"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g6fxr"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gydw8"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_o6a4r"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m38g4"]
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_q3pw1"]
 states/End/position = Vector2(855, 160)
@@ -290,9 +281,7 @@ states/double_jump/node = SubResource("AnimationNodeAnimation_spm66")
 states/double_jump/position = Vector2(555, 57)
 states/jump_start/node = SubResource("AnimationNodeAnimation_2tsxr")
 states/jump_start/position = Vector2(345, 57)
-states/land/node = SubResource("AnimationNodeAnimation_bikeu")
-states/land/position = Vector2(530, 155)
-transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition_ykplm"), "Move", "jump_start", SubResource("AnimationNodeStateMachineTransition_ikkor"), "jump_start", "double_jump", SubResource("AnimationNodeStateMachineTransition_2b3ho"), "double_jump", "land", SubResource("AnimationNodeStateMachineTransition_g6fxr"), "land", "Move", SubResource("AnimationNodeStateMachineTransition_gydw8"), "jump_start", "land", SubResource("AnimationNodeStateMachineTransition_o6a4r")]
+transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition_ykplm"), "Move", "jump_start", SubResource("AnimationNodeStateMachineTransition_ikkor"), "jump_start", "double_jump", SubResource("AnimationNodeStateMachineTransition_2b3ho"), "double_jump", "Move", SubResource("AnimationNodeStateMachineTransition_m38g4")]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_x5m2o")
@@ -327,15 +316,16 @@ current_state = NodePath("Ground")
 script = ExtResource("6_r23yq")
 air_state = NodePath("../Air")
 
-[node name="Air" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("landing_state")]
+[node name="Air" type="Node" parent="CharacterStateMachine"]
 script = ExtResource("7_yr0jr")
-landing_state = NodePath("../Landing")
-double_jump_velocity = -200.0
+double_jump_velocity = null
+double_jump_animation = null
+landing_animation = null
+can_move = null
 
 [node name="Landing" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state")]
 script = ExtResource("8_5371u")
 ground_state = NodePath("../Ground")
-can_move = false
 
 [node name="StateDebugLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
 offset_left = -53.0
