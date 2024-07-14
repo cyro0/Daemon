@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyxydswr6pqoe"
-path="res://.godot/imported/Background.png-6bb84871c3fd330534ba33cb6a80f308.ctex"
+uid="uid://3splw6bnuiww"
+path="res://.godot/imported/uncolored_forest.png-2f13dfd17abccf63b3a92c4c0d740da0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Legacy-Fantasy - High Forest 2.3/Background/Background.png"
-dest_files=["res://.godot/imported/Background.png-6bb84871c3fd330534ba33cb6a80f308.ctex"]
+source_file="res://assets/uncolored_forest.png"
+dest_files=["res://.godot/imported/uncolored_forest.png-2f13dfd17abccf63b3a92c4c0d740da0.ctex"]
 
 [params]
 
