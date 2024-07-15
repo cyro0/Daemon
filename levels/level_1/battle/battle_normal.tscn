@@ -6,11 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cw6ekyepny274" path="res://entities/enemies/snail/snail.tscn" id="3_wch3k"]
 [ext_resource type="AudioStream" uid="uid://cni3hdyo6oiwk" path="res://audio/battle/Mass Destruction -Reload-.mp3" id="5_qfo7u"]
 
-[sub_resource type="Gradient" id="Gradient_5yhak"]
+[sub_resource type="Gradient" id="Gradient_norbw"]
 offsets = PackedFloat32Array(0.954545, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_bb04f"]
-gradient = SubResource("Gradient_5yhak")
+gradient = SubResource("Gradient_norbw")
 fill_to = Vector2(0, 0)
 
 [sub_resource type="Animation" id="Animation_myigo"]

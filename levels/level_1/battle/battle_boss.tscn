@@ -1,0 +1,139 @@
+[gd_scene load_steps=13 format=3 uid="uid://d18tw32ibce1h"]
+
+[ext_resource type="TileSet" uid="uid://chgphnvipg4x8" path="res://levels/level_1/level1_home.tres" id="1_nsxqd"]
+[ext_resource type="PackedScene" uid="uid://xxaoff7gwbrm" path="res://entities/player/player.tscn" id="2_fkdbb"]
+[ext_resource type="PackedScene" uid="uid://uq02uwrlq78o" path="res://entities/enemies/demise/demise.tscn" id="3_hdrdj"]
+[ext_resource type="AudioStream" uid="uid://bdf7q0ossjqbt" path="res://audio/boss_battle/Its_going_down_now.mp3" id="4_t5d2s"]
+
+[sub_resource type="Gradient" id="Gradient_5yhak"]
+offsets = PackedFloat32Array(0.954545, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_525ii"]
+gradient = SubResource("Gradient_5yhak")
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_myigo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-248, -155)]
+}
+
+[sub_resource type="Animation" id="Animation_qph52"]
+resource_name = "move_blackscreen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-280, -155), Vector2(-588, -155)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1d1x"]
+_data = {
+"RESET": SubResource("Animation_myigo"),
+"move_blackscreen": SubResource("Animation_qph52")
+}
+
+[sub_resource type="Animation" id="Animation_4wjhw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-77, -30)]
+}
+
+[sub_resource type="Animation" id="Animation_2u4k0"]
+resource_name = "move_camera"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-70, -30), Vector2(45, -30)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ewyj"]
+_data = {
+"RESET": SubResource("Animation_4wjhw"),
+"move_camera": SubResource("Animation_2u4k0")
+}
+
+[node name="BattleBoss" type="Node2D"]
+
+[node name="Map" type="TileMap" parent="."]
+tile_set = ExtResource("1_nsxqd")
+format = 2
+layer_0/name = "Ground"
+layer_0/tile_data = PackedInt32Array(65535, 65539, 5, 2, 65539, 5, 5, 65539, 5, 65532, 65539, 5, 65529, 65539, 5, -9, 3, 10, 65526, 65539, 5, 65523, 65539, 5, 65520, 65539, 5, 65517, 65539, 5, 8, 65539, 5, 65515, 3, 6, 131051, 3, 7, 196587, 3, 7, 262123, 3, 7, 327659, 3, 7, 393195, 3, 7, 458731, 3, 8, 524267, 3, 8, 589803, 3, 8, 655339, 3, 9, 655340, 65539, 9, 655341, 65539, 9, 655342, 65539, 9, 655343, 65539, 9, 655344, 65539, 9, 655345, 65539, 9, 655346, 131075, 9, 655347, 131075, 9, 655348, 131075, 9, 655349, 131075, 9, 655350, 131075, 9, 655351, 131075, 9, 655352, 131075, 9, 655353, 131075, 9, 655354, 131075, 9, 655355, 131075, 9, 655356, 131075, 9, 655357, 196611, 9, 655358, 196611, 9, 655359, 196611, 9, 589824, 196611, 9, 589826, 65539, 9, 589825, 65539, 9, 589827, 65539, 9, 589828, 65539, 9, 589829, 65539, 9, 589830, 65539, 9, 589831, 196611, 9, 589832, 196611, 9, 589833, 196611, 9, 589834, 262147, 9, 524298, 262147, 8, 458762, 262147, 8, 393226, 262147, 7, 327690, 262147, 7, 262154, 262147, 8, 196618, 262147, 8, 131082, 262147, 7, 65546, 262147, 7, 10, 262147, 6, -65526, 262147, 5, 262125, 65539, 5, 262128, 65539, 5, 262129, 65539, 5, 262130, 65539, 5, 262131, 65539, 5, 262132, 65539, 5, 262133, 65539, 5, 262134, 65539, 5, 262135, 65539, 5, 262136, 65539, 5, 262137, 65539, 5, 262138, 65539, 5, 262139, 65539, 5, 262140, 65539, 5, 262141, 65539, 5, 262142, 65539, 5, 262143, 65539, 5, 196608, 65539, 5, 196609, 65539, 5, 196610, 65539, 5, 196611, 65539, 5, 196612, 65539, 5, 196613, 65539, 5, 196614, 65539, 5, 196615, 65539, 5, 196616, 65539, 5, 131080, 65539, 8, 131079, 65539, 8, 131078, 65539, 8, 131077, 65539, 8, 131076, 65539, 8, 131075, 65539, 8, 131074, 65539, 8, 131073, 65539, 8, 131072, 65539, 8, 196607, 65539, 8, 196606, 65539, 8, 196605, 65539, 8, 196604, 65539, 8, 196603, 65539, 8, 196602, 65539, 8, 196601, 65539, 8, 196600, 65539, 8, 196599, 65539, 8, 196598, 65539, 8, 196597, 65539, 8, 196596, 65539, 8, 196595, 65539, 8, 196594, 65539, 8, 196593, 65539, 8, 196592, 65539, 8, 196591, 65539, 8, 196590, 65539, 8, 196589, 65539, 8, 393197, 65539, 8, 458733, 65539, 8, 524269, 65539, 8, 589805, 65539, 8, 589806, 65539, 8, 589807, 65539, 8, 589808, 65539, 8, 524272, 65539, 8, 458736, 65539, 8, 393200, 65539, 8, 393201, 65539, 8, 393202, 65539, 8, 393203, 65539, 8, 393204, 65539, 8, 393205, 65539, 8, 393206, 65539, 8, 393207, 65539, 8, 393208, 65539, 8, 393209, 65539, 8, 393210, 65539, 8, 393211, 65539, 8, 393212, 65539, 8, 393213, 65539, 8, 393214, 65539, 8, 393215, 65539, 8, 327680, 65539, 8, 327681, 65539, 8, 327682, 65539, 8, 327683, 65539, 8, 327684, 65539, 8, 327685, 65539, 8, 327686, 65539, 8, 327687, 65539, 8, 327688, 65539, 8, 393224, 65539, 8, 458760, 65539, 8, 458759, 65539, 8, 393222, 65539, 8, 393221, 65539, 8, 393220, 65539, 8, 393219, 65539, 8, 393218, 65539, 8, 393217, 65539, 8, 393216, 65539, 8, 458751, 65539, 8, 458750, 65539, 8, 458749, 65539, 8, 458748, 65539, 8, 458747, 65539, 8, 458746, 65539, 8, 458745, 65539, 8, 458744, 65539, 8, 458743, 65539, 8, 458742, 65539, 8, 458741, 65539, 8, 458740, 65539, 8, 524276, 65539, 8, 524275, 65539, 8, 524274, 65539, 8, 458738, 65539, 8, 589811, 65539, 8, 589812, 65539, 8, 589813, 65539, 8, 589814, 65539, 8, 589815, 65539, 8, 589816, 65539, 8, 589817, 65539, 8, 589818, 65539, 8, 589819, 65539, 8, 589820, 65539, 8, 589821, 65539, 8, 589822, 65539, 8, 589823, 65539, 8, 524288, 65539, 8, 524289, 65539, 8, 524290, 65539, 8, 524291, 65539, 8, 524292, 65539, 8, 524293, 65539, 8, 524294, 65539, 8, 524295, 65539, 8, 524296, 65539, 8, 458758, 65539, 8, 458757, 65539, 8, 458756, 65539, 8, 458755, 65539, 8, 458754, 65539, 8, 458753, 65539, 8, 458752, 65539, 8, 524287, 65539, 8, 524286, 65539, 8, 524285, 65539, 8, 524284, 65539, 8, 524283, 65539, 8, 524282, 65539, 8, 524281, 65539, 8, 524280, 65539, 8, 524279, 65539, 8, 262127, 65539, 5, 262126, 65539, 5, 393196, 327683, 11, -5, 3, 10, -65529, 3, 21, -20, 3, 10, -16, 3, 21, -65535, 3, 21, 458737, 458755, 11)
+layer_1/name = "Background1"
+layer_1/z_index = -1
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Before_Ground"
+layer_2/z_index = 1
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Before_Ground2"
+layer_3/z_index = 2
+layer_3/tile_data = PackedInt32Array()
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+z_index = 10
+offset_left = -248.0
+offset_top = -155.0
+offset_right = 153.0
+offset_bottom = 73.0
+texture = SubResource("GradientTexture2D_525ii")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+libraries = {
+"": SubResource("AnimationLibrary_o1d1x")
+}
+autoplay = "move_blackscreen"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-77, -30)
+zoom = Vector2(3.6, 3.6)
+position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+libraries = {
+"": SubResource("AnimationLibrary_3ewyj")
+}
+autoplay = "move_camera"
+
+[node name="Player" parent="." instance=ExtResource("2_fkdbb")]
+position = Vector2(-171, -49)
+
+[node name="Demise" parent="." instance=ExtResource("3_hdrdj")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_t5d2s")
+volume_db = -12.0
+autoplay = true

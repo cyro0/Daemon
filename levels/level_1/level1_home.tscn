@@ -125,7 +125,6 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="TransitionToBattleNormal" parent="Player" instance=ExtResource("6_abpxw")]
-visible = false
 offset_left = 3.0
 offset_top = 9.0
 offset_right = 3.0
