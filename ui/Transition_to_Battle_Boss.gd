@@ -1,6 +1,6 @@
 extends Control
 
-class_name TransitionToBattleBoss
+class_name TransitionToBattleNormal
 
 @export var scene_to_load : PackedScene
 
@@ -22,5 +22,5 @@ func _on_animation_player_animation_finished(anim_name):
 	if (scene_to_load != null && anim_name == "fade_out"):
 		get_tree().change_scene_to_packed(scene_to_load)
 
-func _on_demise_body_entered(body):
+func _on_snail_body_entered(body):
 	transition()

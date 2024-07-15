@@ -1,71 +1,22 @@
-[gd_scene load_steps=13 format=3 uid="uid://d18tw32ibce1h"]
+[gd_scene load_steps=12 format=3 uid="uid://d18tw32ibce1h"]
 
+[ext_resource type="Script" path="res://levels/level_1/battle/battle_boss.gd" id="1_dvxtd"]
 [ext_resource type="TileSet" uid="uid://chgphnvipg4x8" path="res://levels/level_1/level1_home.tres" id="1_nsxqd"]
 [ext_resource type="PackedScene" uid="uid://xxaoff7gwbrm" path="res://entities/player/player.tscn" id="2_fkdbb"]
 [ext_resource type="PackedScene" uid="uid://uq02uwrlq78o" path="res://entities/enemies/demise/demise.tscn" id="3_hdrdj"]
 [ext_resource type="AudioStream" uid="uid://bdf7q0ossjqbt" path="res://audio/boss_battle/Its_going_down_now.mp3" id="4_t5d2s"]
+[ext_resource type="Texture2D" uid="uid://3splw6bnuiww" path="res://assets/uncolored_forest.png" id="5_cf3x4"]
 
-[sub_resource type="Gradient" id="Gradient_5yhak"]
-offsets = PackedFloat32Array(0.954545, 1)
+[sub_resource type="Gradient" id="Gradient_xvi1i"]
+offsets = PackedFloat32Array(0.922078, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_525ii"]
-gradient = SubResource("Gradient_5yhak")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0r45f"]
+gradient = SubResource("Gradient_xvi1i")
 fill_to = Vector2(0, 0)
 
-[sub_resource type="Animation" id="Animation_myigo"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-248, -155)]
-}
-
-[sub_resource type="Animation" id="Animation_qph52"]
-resource_name = "move_blackscreen"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-280, -155), Vector2(-588, -155)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1d1x"]
-_data = {
-"RESET": SubResource("Animation_myigo"),
-"move_blackscreen": SubResource("Animation_qph52")
-}
-
-[sub_resource type="Animation" id="Animation_4wjhw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-77, -30)]
-}
-
-[sub_resource type="Animation" id="Animation_2u4k0"]
+[sub_resource type="Animation" id="Animation_pcux0"]
 resource_name = "move_camera"
-length = 1.5
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -73,19 +24,35 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
+"times": PackedFloat32Array(0.5, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-70, -30), Vector2(45, -30)]
+"values": [Vector2(-534, -30), Vector2(-75, -30)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ewyj"]
+[sub_resource type="Animation" id="Animation_nscti"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-534, -30)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ubw2l"]
 _data = {
-"RESET": SubResource("Animation_4wjhw"),
-"move_camera": SubResource("Animation_2u4k0")
+"RESET": SubResource("Animation_nscti"),
+"move_camera": SubResource("Animation_pcux0")
 }
 
 [node name="BattleBoss" type="Node2D"]
+script = ExtResource("1_dvxtd")
 
 [node name="Map" type="TileMap" parent="."]
 tile_set = ExtResource("1_nsxqd")
@@ -102,34 +69,8 @@ layer_3/name = "Before_Ground2"
 layer_3/z_index = 2
 layer_3/tile_data = PackedInt32Array()
 
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-z_index = 10
-offset_left = -248.0
-offset_top = -155.0
-offset_right = 153.0
-offset_bottom = 73.0
-texture = SubResource("GradientTexture2D_525ii")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
-libraries = {
-"": SubResource("AnimationLibrary_o1d1x")
-}
-autoplay = "move_blackscreen"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-77, -30)
-zoom = Vector2(3.6, 3.6)
-position_smoothing_enabled = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
-libraries = {
-"": SubResource("AnimationLibrary_3ewyj")
-}
-autoplay = "move_camera"
-
 [node name="Player" parent="." instance=ExtResource("2_fkdbb")]
-position = Vector2(-171, -49)
+position = Vector2(-172, -32)
 
 [node name="Demise" parent="." instance=ExtResource("3_hdrdj")]
 
@@ -137,3 +78,39 @@ position = Vector2(-171, -49)
 stream = ExtResource("4_t5d2s")
 volume_db = -12.0
 autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -714.0
+offset_top = -129.0
+offset_right = -370.0
+offset_bottom = 67.0
+texture = SubResource("GradientTexture2D_0r45f")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-534, -30)
+zoom = Vector2(3.6, 3.6)
+position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+libraries = {
+"": SubResource("AnimationLibrary_ubw2l")
+}
+autoplay = "move_camera"
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background"]
+layer = -4
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+position = Vector2(4, 0)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(815, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.726438, 0.178183, 0.272557, 1)
+texture_filter = 1
+position = Vector2(-4, -232)
+scale = Vector2(0.8, 0.507812)
+texture = ExtResource("5_cf3x4")
+centered = false

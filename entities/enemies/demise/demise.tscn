@@ -45,6 +45,7 @@ _data = {
 }
 
 [node name="Demise" type="Area2D"]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -39)

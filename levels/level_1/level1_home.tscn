@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dg0iuu1frpu1o"]
+[gd_scene load_steps=20 format=3 uid="uid://dg0iuu1frpu1o"]
 
 [ext_resource type="Script" path="res://levels/level_1/level1_home.gd" id="1_8ja8k"]
 [ext_resource type="TileSet" uid="uid://chgphnvipg4x8" path="res://levels/level_1/level1_home.tres" id="1_elwaf"]
@@ -12,6 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://dlypta8rj8551" path="res://audio/level1/Heaven.mp3" id="10_1jaqp"]
 [ext_resource type="Script" path="res://levels/level_1/AudioStreamPlayer.gd" id="11_ixnih"]
 [ext_resource type="PackedScene" uid="uid://uq02uwrlq78o" path="res://entities/enemies/demise/demise.tscn" id="12_g6q8d"]
+[ext_resource type="PackedScene" uid="uid://b21typ8idwm18" path="res://ui/Transition_to_Battle_Boss.tscn" id="13_x251x"]
+[ext_resource type="PackedScene" uid="uid://d18tw32ibce1h" path="res://levels/level_1/battle/battle_boss.tscn" id="14_sg0kj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7lsb1"]
 size = Vector2(80, 8)
@@ -149,5 +151,10 @@ script = ExtResource("11_ixnih")
 [node name="Demise" parent="." instance=ExtResource("12_g6q8d")]
 position = Vector2(209, 0)
 
+[node name="TransitionToBattleNormal" parent="Demise" instance=ExtResource("13_x251x")]
+z_index = 10
+scene_to_load = ExtResource("14_sg0kj")
+
 [connection signal="focus_entered" from="Player/TransitionToBattleNormal" to="AudioStreamPlayer" method="_on_transition_to_battle_normal_focus_entered"]
 [connection signal="body_entered" from="Snail" to="Player/TransitionToBattleNormal" method="_on_snail_body_entered"]
+[connection signal="body_entered" from="Demise" to="Demise/TransitionToBattleNormal" method="_on_demise_body_entered"]
