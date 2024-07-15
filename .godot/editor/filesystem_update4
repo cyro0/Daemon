@@ -1,8 +1,4 @@
-res://entities/player/player.tscn
-res://levels/level1_home.tscn
+res://levels/battle/battle_normal.tscn
+res://levels/level_1/level1_home.tres
 res://levels/level_1/level1_home.tscn
-res://scenes/killzone.tscn
-res://scenes/killzone.gd
-res://entities/player/AirState.gd
-res://entities/player/GroundState.gd
-res://entities/player/State.gd
+res://entities/player/player.tscn

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721032353
+::res://::1721039728
 icon.svg::CompressedTexture2D::551130895525750008::1720982746::1720982750::1::::<><>::
 ::res://assets/::1720991812
 Unbenannt.JPG::CompressedTexture2D::641283945884588548::1720991281::1720991285::1::::<><>::
@@ -68,18 +68,26 @@ Golden-Tree.png::CompressedTexture2D::2836731231083879240::1720982909::172098291
 Green-Tree.png::CompressedTexture2D::7008490781927734883::1720982909::1720982910::1::::<><>::
 Red-Tree.png::CompressedTexture2D::929702744176828458::1720982909::1720982910::1::::<><>::
 Yellow-Tree.png::CompressedTexture2D::3175028233474717701::1720982909::1720982910::1::::<><>::
-::res://entities/::1721031723
-::res://entities/player/::1721032356
-AirState.gd::GDScript::-1::1721031747::0::1::::AirState<>State<>::
+::res://entities/::1721038653
+::res://entities/enemies/::1721038658
+::res://entities/enemies/snail/::1721038799
+::res://entities/player/::1721039224
+AirState.gd::GDScript::-1::1721036511::0::1::::AirState<>State<>::
 CharacterStateMachine.gd::GDScript::-1::1721031747::0::1::::CharacterStateMachine<>Node<>::
-GroundState.gd::GDScript::-1::1721031747::0::1::::GroundState<>State<>::
-LandingState.gd::GDScript::-1::1721031747::0::1::::<>State<>::
+GroundState.gd::GDScript::-1::1721037930::0::1::::GroundState<>State<>::
 player.gd::GDScript::-1::1721031747::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1661849364936379042::1721032356::0::1::::<><>::res://entities/player/player.gd<>uid://daoi60guy2euw::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>uid://ddf58tj176vr6::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png<>uid://blmqhdbs5nna5::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>res://entities/player/CharacterStateMachine.gd<>res://entities/player/GroundState.gd<>res://entities/player/AirState.gd<>res://entities/player/LandingState.gd<>res://entities/player/StateDebugLabel.gd
-State.gd::GDScript::-1::1721031747::0::1::::State<>Node<>::
+player.tscn::PackedScene::1661849364936379042::1721039224::0::1::::<><>::res://entities/player/player.gd<>uid://daoi60guy2euw::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>uid://ddf58tj176vr6::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png<>uid://blmqhdbs5nna5::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>res://entities/player/CharacterStateMachine.gd<>res://entities/player/GroundState.gd<>res://entities/player/AirState.gd<>res://entities/player/StateDebugLabel.gd
+State.gd::GDScript::-1::1721037166::0::1::::State<>Node<>::
 StateDebugLabel.gd::GDScript::-1::1721031747::0::1::::<>Label<>::
-::res://levels/::1721032353
-::res://levels/level_1/::1721032356
-level1_home.tscn::PackedScene::7632527099461647610::1721032356::0::1::::<><>::uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png<>uid://3splw6bnuiww::::res://assets/uncolored_forest.png<>uid://xxaoff7gwbrm::::res://entities/player/player.tscn
+::res://levels/::1721039242
+::res://levels/battle/::1721039248
+battle_normal.tscn::PackedScene::155302642941618202::1721039248::0::1::::<><>::
+::res://levels/level_1/::1721039224
+level1_home.tres::TileSet::5277473510453861891::1721039219::0::1::::<><>::uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png
+level1_home.tscn::PackedScene::7632527099461647610::1721039224::0::1::::<><>::uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png<>uid://3splw6bnuiww::::res://assets/uncolored_forest.png<>uid://xxaoff7gwbrm::::res://entities/player/player.tscn<>uid://cp3om70cuwqgl::::res://scenes/killzone.tscn
+::res://levels/level_1/battle/::1721039063
 ::res://menus/::1720982877
+::res://scenes/::1721034897
+killzone.gd::GDScript::-1::1721033225::0::1::::<>Area2D<>::
+killzone.tscn::PackedScene::5884349785981746823::1721034897::0::1::::<><>::res://scenes/killzone.gd
 ::res://ui/::1720982881

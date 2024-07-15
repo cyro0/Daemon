@@ -1,7 +1,8 @@
+Camera2D
+TileMap
 Timer
 CollisionShape2D
 Area2D
-Camera2D
 AnimationTree
 Label
 Node
@@ -11,5 +12,3 @@ Sprite2D
 AnimatableBody2D
 CanvasLayer
 CharacterBody2D
-ParallaxLayer
-TextureRect
