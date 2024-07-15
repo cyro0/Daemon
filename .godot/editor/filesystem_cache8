@@ -1,13 +1,143 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721064276
-export_presets.cfg::TextFile::-1::1721064101::0::1::::<><>::
-icon.svg::CompressedTexture2D::551130895525750008::1720982746::1720982750::1::::<><>::
-index.apple-touch-icon.png::CompressedTexture2D::5769619207832687151::1721064275::1721064312::1::::<><>::
-index.icon.png::CompressedTexture2D::4337578887011606525::1721064275::1721064312::1::::<><>::
-index.png::CompressedTexture2D::4897721117707425301::1721064275::1721064312::1::::<><>::
-::res://assets/::1720991812
+::res://::1721072447
+export_presets.cfg::TextFile::-1::1721064380::0::1::::<><>::
+icon.svg::CompressedTexture2D::1837649606047918270::1720982746::1721072447::1::::<><>::
+::res://assets/::1721072854
 Unbenannt.JPG::CompressedTexture2D::641283945884588548::1720991281::1720991285::1::::<><>::
 uncolored_forest.png::CompressedTexture2D::2003378023528677490::1720697506::1720991812::1::::<><>::
+::res://assets/Bringer-Of-Death/::1721072841
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/::1721072844
+Contact.txt::TextFile::-1::1721072841::0::1::::<><>::
+License.txt::TextFile::-1::1721072841::0::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/::1721072843
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/Attack/::1721072841
+Bringer-of-Death_Attack_1.png::CompressedTexture2D::5193175896307403303::1721072841::1721072936::1::::<><>::
+Bringer-of-Death_Attack_2.png::CompressedTexture2D::3736357886940271390::1721072841::1721072936::1::::<><>::
+Bringer-of-Death_Attack_3.png::CompressedTexture2D::2037539364859101587::1721072841::1721072936::1::::<><>::
+Bringer-of-Death_Attack_4.png::CompressedTexture2D::9085468050058969294::1721072841::1721072936::1::::<><>::
+Bringer-of-Death_Attack_5.png::CompressedTexture2D::8130599627945294493::1721072841::1721072936::1::::<><>::
+Bringer-of-Death_Attack_6.png::CompressedTexture2D::8235025845831704480::1721072841::1721072936::1::::<><>::
+Bringer-of-Death_Attack_7.png::CompressedTexture2D::7494228444740841220::1721072841::1721072936::1::::<><>::
+Bringer-of-Death_Attack_8.png::CompressedTexture2D::3572732514918499536::1721072841::1721072936::1::::<><>::
+Bringer-of-Death_Attack_9.png::CompressedTexture2D::2236564470839703973::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Attack_10.png::CompressedTexture2D::897076798950827466::1721072841::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/Cast/::1721072842
+Bringer-of-Death_Cast_1.png::CompressedTexture2D::2151994920024177610::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_2.png::CompressedTexture2D::7418137873524052131::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_3.png::CompressedTexture2D::4401970770377131233::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_4.png::CompressedTexture2D::67879587474045183::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_5.png::CompressedTexture2D::1486911260423724686::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_6.png::CompressedTexture2D::3365690433457647395::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_7.png::CompressedTexture2D::7759130879776330791::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_8.png::CompressedTexture2D::2570902171336299954::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_9.png::CompressedTexture2D::614852339952644823::1721072842::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/Death/::1721072842
+Bringer-of-Death_Death_1.png::CompressedTexture2D::7395526253120733612::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Death_2.png::CompressedTexture2D::5100051510163350258::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Death_3.png::CompressedTexture2D::6438197596520448870::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Death_4.png::CompressedTexture2D::2270487914220632568::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Death_5.png::CompressedTexture2D::472217165069298714::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Death_6.png::CompressedTexture2D::8511610167091926778::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Death_7.png::CompressedTexture2D::2499449397085113948::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Death_8.png::CompressedTexture2D::2705708102963024914::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Death_9.png::CompressedTexture2D::1051750381558402246::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Death_10.png::CompressedTexture2D::3545491814014378673::1721072842::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/Hurt/::1721072842
+Bringer-of-Death_Hurt_1.png::CompressedTexture2D::3524194730038984468::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Hurt_2.png::CompressedTexture2D::7747668090957187239::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Hurt_3.png::CompressedTexture2D::7046732586339451877::1721072842::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/Idle/::1721072842
+Bringer-of-Death_Idle_1.png::CompressedTexture2D::3573292956885382735::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Idle_2.png::CompressedTexture2D::4603415684488015282::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Idle_3.png::CompressedTexture2D::3133491933575747651::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Idle_4.png::CompressedTexture2D::2398571437977683497::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Idle_5.png::CompressedTexture2D::6144545658627208485::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Idle_6.png::CompressedTexture2D::1134322736820007408::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Idle_7.png::CompressedTexture2D::8176367339475244036::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Idle_8.png::CompressedTexture2D::3455200825044277558::1721072842::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/No Effect Sprites/::1721072843
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/No Effect Sprites/Attack/::1721072842
+Bringer-of-Death_Attack_1.png::CompressedTexture2D::4356619621715986877::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Attack_2.png::CompressedTexture2D::2927124979204725390::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Attack_3.png::CompressedTexture2D::7620125079111233015::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Attack_4.png::CompressedTexture2D::89917832950780313::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Attack_5.png::CompressedTexture2D::8424395264467760259::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Attack_6.png::CompressedTexture2D::5086063732703089777::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Attack_7.png::CompressedTexture2D::3897394669416358490::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Attack_8.png::CompressedTexture2D::5060871523542330008::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Attack_9.png::CompressedTexture2D::4558584442252058561::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Attack_10.png::CompressedTexture2D::6433002425860994696::1721072842::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/No Effect Sprites/Cast/::1721072842
+Bringer-of-Death_Cast_1.png::CompressedTexture2D::6980294997475079::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_2.png::CompressedTexture2D::8088818537719697901::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_3.png::CompressedTexture2D::874284239648552457::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_4.png::CompressedTexture2D::3269927761851797549::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_5.png::CompressedTexture2D::9034691845495855442::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_6.png::CompressedTexture2D::6794008066172160003::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_7.png::CompressedTexture2D::5064670724771822029::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_8.png::CompressedTexture2D::7753399922617776940::1721072842::1721072936::1::::<><>::
+Bringer-of-Death_Cast_9.png::CompressedTexture2D::5173999479284894544::1721072842::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/No Effect Sprites/Death/::1721072843
+Bringer-of-Death_Death_1.png::CompressedTexture2D::5383783597526218305::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Death_2.png::CompressedTexture2D::368488686267672877::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Death_3.png::CompressedTexture2D::5100705718233056317::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Death_4.png::CompressedTexture2D::1404277919030698671::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Death_5.png::CompressedTexture2D::347372513933998414::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Death_6.png::CompressedTexture2D::7654114634697068220::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Death_7.png::CompressedTexture2D::8560272794770364493::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Death_8.png::CompressedTexture2D::4859015248111465535::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Death_9.png::CompressedTexture2D::7924374948580478276::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Death_10.png::CompressedTexture2D::531063282139979266::1721072843::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/No Effect Sprites/Hurt/::1721072843
+Bringer-of-Death_Hurt_1.png::CompressedTexture2D::287160645102461464::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Hurt_2.png::CompressedTexture2D::6711918892792400857::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Hurt_3.png::CompressedTexture2D::7912847807473076909::1721072843::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/No Effect Sprites/Spell/::1721072843
+Bringer-of-Death_Spell_1.png::CompressedTexture2D::2970987989118511828::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_2.png::CompressedTexture2D::4399617384811884911::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_3.png::CompressedTexture2D::2830533896723150820::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_4.png::CompressedTexture2D::354149300535756042::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_5.png::CompressedTexture2D::5593727979456605839::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_6.png::CompressedTexture2D::8366474706519340066::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_7.png::CompressedTexture2D::2811740652295108978::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_8.png::CompressedTexture2D::1423791223215864156::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_9.png::CompressedTexture2D::9009094042790029444::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_10.png::CompressedTexture2D::8568220714320615784::1721072843::1721072935::1::::<><>::
+Bringer-of-Death_Spell_11.png::CompressedTexture2D::843087621455717525::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_12.png::CompressedTexture2D::1975039972110282831::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_13.png::CompressedTexture2D::3170389644020599974::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_14.png::CompressedTexture2D::1948853833886548874::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_15.png::CompressedTexture2D::4218425624571192343::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_16.png::CompressedTexture2D::3388680404423535719::1721072843::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/Spell/::1721072843
+Bringer-of-Death_Spell_1.png::CompressedTexture2D::7646219160513241722::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_2.png::CompressedTexture2D::8965267385723731550::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_3.png::CompressedTexture2D::4688913972076705725::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_4.png::CompressedTexture2D::5750277206642817071::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_5.png::CompressedTexture2D::9144051300989295947::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_6.png::CompressedTexture2D::1880104526056909101::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_7.png::CompressedTexture2D::9221284803330795906::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_8.png::CompressedTexture2D::225391503464143812::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_9.png::CompressedTexture2D::4030894591309069182::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_10.png::CompressedTexture2D::8896322882896123266::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_11.png::CompressedTexture2D::3000218214723301459::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_12.png::CompressedTexture2D::7726778390009745318::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_13.png::CompressedTexture2D::6231827148866077438::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_14.png::CompressedTexture2D::6641964656725014257::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_15.png::CompressedTexture2D::1657501989817719998::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Spell_16.png::CompressedTexture2D::1215708068976310441::1721072843::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/Individual Sprite/Walk/::1721072844
+Bringer-of-Death_Walk_1.png::CompressedTexture2D::3973621284295053540::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Walk_2.png::CompressedTexture2D::4686198411275407177::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Walk_3.png::CompressedTexture2D::8915536957490207601::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Walk_4.png::CompressedTexture2D::4372393915848101166::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Walk_5.png::CompressedTexture2D::1537308181707631794::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Walk_6.png::CompressedTexture2D::1931497831901665561::1721072843::1721072936::1::::<><>::
+Bringer-of-Death_Walk_7.png::CompressedTexture2D::3536194730902564482::1721072844::1721072936::1::::<><>::
+Bringer-of-Death_Walk_8.png::CompressedTexture2D::574459991543001058::1721072844::1721072936::1::::<><>::
+::res://assets/Bringer-Of-Death/Bringer-Of-Death/SpriteSheet/::1721072844
+Bringer-of-Death-SpritSheet.png::CompressedTexture2D::7756514001276547369::1721072844::1721072936::1::::<><>::
+Bringer-of-Death-SpritSheet_no-Effect.png::CompressedTexture2D::3467490005006581910::1721072844::1721072936::1::::<><>::
 ::res://assets/Legacy-Fantasy - High Forest 2.3/::1720982909
 ::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/::1720982910
 Buildings.png::CompressedTexture2D::5779274405504842554::1720982909::1720982910::1::::<><>::
@@ -80,31 +210,31 @@ Mass Destruction -Reload-.mp3::AudioStreamMP3::5703524128391335606::1721059249::
 Heaven.mp3::AudioStreamMP3::7981829133935091718::1721059832::1721060118::1::::<><>::
 ::res://entities/::1721038653
 ::res://entities/enemies/::1721038658
-::res://entities/enemies/snail/::1721064017
-snail.tscn::PackedScene::6381253631148382905::1721064017::0::1::::<><>::uid://cyham1jcje8q4::::res://assets/Legacy-Fantasy - High Forest 2.3/Mob/Snail/all.png
-::res://entities/player/::1721064017
+::res://entities/enemies/snail/::1721072460
+snail.tscn::PackedScene::6381253631148382905::1721072460::0::1::::<><>::uid://cyham1jcje8q4::::res://assets/Legacy-Fantasy - High Forest 2.3/Mob/Snail/all.png
+::res://entities/player/::1721072460
 AirState.gd::GDScript::-1::1721036511::0::1::::AirState<>State<>::
 CharacterStateMachine.gd::GDScript::-1::1721031747::0::1::::CharacterStateMachine<>Node<>::
 GroundState.gd::GDScript::-1::1721055448::0::1::::GroundState<>State<>::
 player.gd::GDScript::-1::1721031747::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1661849364936379042::1721064017::0::1::::<><>::res://entities/player/player.gd<>uid://daoi60guy2euw::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>uid://ddf58tj176vr6::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png<>uid://blmqhdbs5nna5::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>res://entities/player/CharacterStateMachine.gd<>res://entities/player/GroundState.gd<>res://entities/player/AirState.gd<>res://entities/player/StateDebugLabel.gd
+player.tscn::PackedScene::1661849364936379042::1721072460::0::1::::<><>::res://entities/player/player.gd<>uid://daoi60guy2euw::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>uid://ddf58tj176vr6::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png<>uid://blmqhdbs5nna5::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>res://entities/player/CharacterStateMachine.gd<>res://entities/player/GroundState.gd<>res://entities/player/AirState.gd<>res://entities/player/StateDebugLabel.gd
 State.gd::GDScript::-1::1721037166::0::1::::State<>Node<>::
 StateDebugLabel.gd::GDScript::-1::1721031747::0::1::::<>Label<>::
 ::res://levels/::1721059622
-::res://levels/level_1/::1721064017
-level1_home.gd::GDScript::-1::1721062192::0::1::::<>Node2D<>::
-level1_home.tres::TileSet::5277473510453861891::1721060136::0::1::::<><>::uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png
-level1_home.tscn::PackedScene::7632527099461647610::1721064017::0::1::::<><>::res://levels/level_1/level1_home.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png<>uid://3splw6bnuiww::::res://assets/uncolored_forest.png<>uid://xxaoff7gwbrm::::res://entities/player/player.tscn<>uid://cp3om70cuwqgl::::res://scenes/killzone.tscn<>uid://80l5qa3yt511::::res://ui/Transition_to_Battle_Normal.tscn<>uid://chh2uqsap64m::::res://levels/level_1/battle/battle_normal.tscn<>uid://cw6ekyepny274::::res://entities/enemies/snail/snail.tscn<>uid://dlypta8rj8551::::res://audio/level1/Heaven.mp3<>res://levels/level_1/AudioStreamPlayer.gd
+::res://levels/level_1/::1721072460
 AudioStreamPlayer.gd::GDScript::-1::1721062707::0::1::::<>AudioStreamPlayer<>::
-::res://levels/level_1/battle/::1721064030
+level1_home.gd::GDScript::-1::1721062192::0::1::::<>Node2D<>::
+level1_home.tres::TileSet::5277473510453861891::1721072381::0::1::::<><>::uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png
+level1_home.tscn::PackedScene::7632527099461647610::1721072460::0::1::::<><>::res://levels/level_1/level1_home.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png<>uid://3splw6bnuiww::::res://assets/uncolored_forest.png<>uid://xxaoff7gwbrm::::res://entities/player/player.tscn<>uid://cp3om70cuwqgl::::res://scenes/killzone.tscn<>uid://80l5qa3yt511::::res://ui/Transition_to_Battle_Normal.tscn<>uid://chh2uqsap64m::::res://levels/level_1/battle/battle_normal.tscn<>uid://cw6ekyepny274::::res://entities/enemies/snail/snail.tscn<>uid://dlypta8rj8551::::res://audio/level1/Heaven.mp3<>res://levels/level_1/AudioStreamPlayer.gd
+::res://levels/level_1/battle/::1721072460
 battle_normal.gd::GDScript::-1::1721058086::0::1::::<>Node2D<>::
-battle_normal.tscn::PackedScene::155302642941618202::1721064030::0::1::::<><>::res://levels/level_1/battle/battle_normal.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://xxaoff7gwbrm::::res://entities/player/player.tscn<>uid://cw6ekyepny274::::res://entities/enemies/snail/snail.tscn<>uid://cni3hdyo6oiwk::::res://audio/battle/Mass Destruction -Reload-.mp3
+battle_normal.tscn::PackedScene::155302642941618202::1721072460::0::1::::<><>::res://levels/level_1/battle/battle_normal.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://xxaoff7gwbrm::::res://entities/player/player.tscn<>uid://cw6ekyepny274::::res://entities/enemies/snail/snail.tscn<>uid://cni3hdyo6oiwk::::res://audio/battle/Mass Destruction -Reload-.mp3
 ::res://menus/::1720982877
-::res://scenes/::1721064017
+::res://scenes/::1721072460
 audio_player.gd::GDScript::-1::1721062163::0::1::::<>AudioStreamPlayer2D<>::
-audio_player.tscn::PackedScene::8075555364343631384::1721064017::0::1::::<><>::res://scenes/audio_player.gd
+audio_player.tscn::PackedScene::8075555364343631384::1721072460::0::1::::<><>::res://scenes/audio_player.gd
 killzone.gd::GDScript::-1::1721033225::0::1::::<>Area2D<>::
 killzone.tscn::PackedScene::5884349785981746823::1721034897::0::1::::<><>::res://scenes/killzone.gd
-::res://ui/::1721064017
+::res://ui/::1721072460
 Transition_to_Battle_Normal.gd::GDScript::-1::1721062660::0::1::::TransitionToBattleNormal<>Control<>::
-Transition_to_Battle_Normal.tscn::PackedScene::2368563586322789662::1721064017::0::1::::<><>::res://ui/Transition_to_Battle_Normal.gd
+Transition_to_Battle_Normal.tscn::PackedScene::2368563586322789662::1721072460::0::1::::<><>::res://ui/Transition_to_Battle_Normal.gd

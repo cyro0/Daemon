@@ -13,21 +13,6 @@ offsets = PackedFloat32Array(0.954545, 1)
 gradient = SubResource("Gradient_5yhak")
 fill_to = Vector2(0, 0)
 
-[sub_resource type="Animation" id="Animation_qph52"]
-resource_name = "move_blackscreen"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-280, -155), Vector2(-588, -155)]
-}
-
 [sub_resource type="Animation" id="Animation_myigo"]
 length = 0.001
 tracks/0/type = "value"
@@ -43,10 +28,40 @@ tracks/0/keys = {
 "values": [Vector2(-248, -155)]
 }
 
+[sub_resource type="Animation" id="Animation_qph52"]
+resource_name = "move_blackscreen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-280, -155), Vector2(-588, -155)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o1d1x"]
 _data = {
 "RESET": SubResource("Animation_myigo"),
 "move_blackscreen": SubResource("Animation_qph52")
+}
+
+[sub_resource type="Animation" id="Animation_4wjhw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-77, -30)]
 }
 
 [sub_resource type="Animation" id="Animation_2u4k0"]
@@ -63,21 +78,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-70, -30), Vector2(45, -30)]
-}
-
-[sub_resource type="Animation" id="Animation_4wjhw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-77, -30)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ewyj"]

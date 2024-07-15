@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://uq02uwrlq78o"]
+
+[ext_resource type="Texture2D" uid="uid://dirkwgeml4lv2" path="res://assets/Bringer-Of-Death/Bringer-Of-Death/SpriteSheet/Bringer-of-Death-SpritSheet.png" id="1_qvn5x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nkt1i"]
+radius = 28.0
+height = 78.0
+
+[sub_resource type="Animation" id="Animation_pahqg"]
+resource_name = "idle"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_0vqnj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jkoeg"]
+_data = {
+"RESET": SubResource("Animation_0vqnj"),
+"idle": SubResource("Animation_pahqg")
+}
+
+[node name="Demise" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -39)
+shape = SubResource("CapsuleShape2D_nkt1i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-54, -68.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_qvn5x")
+hframes = 8
+vframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jkoeg")
+}
+autoplay = "idle"

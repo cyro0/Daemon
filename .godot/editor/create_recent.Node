@@ -1,4 +1,7 @@
 AnimationPlayer
+Sprite2D
+CollisionShape2D
+Area2D
 TextureRect
 AudioStreamPlayer
 AudioStreamPlayer2D
@@ -7,8 +10,5 @@ Timer
 Button
 CheckButton
 CanvasLayer
-Sprite2D
-CollisionShape2D
-Area2D
 Camera2D
 TileMap
