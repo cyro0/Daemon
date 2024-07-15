@@ -1,8 +1,10 @@
-res://levels/battle/battle_normal.tscn
-res://levels/level_1/level1_home.tres
 res://levels/level_1/level1_home.tscn
+res://levels/level_1/level1_home.tres
 res://entities/player/player.tscn
+res://levels/battle/battle_normal.tscn
 res://entities/enemies/snail/snail.tscn
 res://ui/Transition_to_Battle_Normal.tscn
+res://levels/level_1/BattleTransitionTest.gd
 res://ui/Transition_to_Battle_Normal.gd
-res://levels/level_1/CheckButton.gd
+res://ui/Timer.gd
+res://levels/battle/battle_normal.gd

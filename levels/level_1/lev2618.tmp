@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dg0iuu1frpu1o"]
+[gd_scene load_steps=13 format=3 uid="uid://dg0iuu1frpu1o"]
 
 [ext_resource type="TileSet" uid="uid://chgphnvipg4x8" path="res://levels/level_1/level1_home.tres" id="1_elwaf"]
 [ext_resource type="Texture2D" uid="uid://ckxlxh4l724a" path="res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png" id="1_xt6wy"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cp3om70cuwqgl" path="res://scenes/killzone.tscn" id="4_87a6y"]
 [ext_resource type="Script" path="res://levels/level_1/BattleTransitionTest.gd" id="5_3ldoo"]
 [ext_resource type="PackedScene" uid="uid://80l5qa3yt511" path="res://ui/Transition_to_Battle_Normal.tscn" id="6_abpxw"]
-[ext_resource type="PackedScene" uid="uid://chh2uqsap64m" path="res://levels/battle/battle_normal.tscn" id="7_wju1v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7lsb1"]
 size = Vector2(80, 8)
@@ -119,27 +118,22 @@ limit_bottom = 128
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="Button" type="Button" parent="Player" node_paths=PackedStringArray("transitioner")]
-offset_left = -90.0
-offset_top = -3.0
-offset_right = -25.0
-offset_bottom = 28.0
+[node name="Killzone" parent="." instance=ExtResource("4_87a6y")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_o7b14")
+
+[node name="TransitionToBattleNormal" parent="." instance=ExtResource("6_abpxw")]
+
+[node name="Button" type="Button" parent="." node_paths=PackedStringArray("transitioner")]
+offset_left = -139.0
+offset_top = -35.0
+offset_right = -74.0
+offset_bottom = -4.0
 focus_mode = 0
 action_mode = 0
 text = "BATTLE"
 script = ExtResource("5_3ldoo")
 transitioner = NodePath("../TransitionToBattleNormal")
 
-[node name="TransitionToBattleNormal" parent="Player" instance=ExtResource("6_abpxw")]
-offset_left = 3.0
-offset_top = 9.0
-offset_right = 3.0
-offset_bottom = 9.0
-scene_to_load = ExtResource("7_wju1v")
-
-[node name="Killzone" parent="." instance=ExtResource("4_87a6y")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-shape = SubResource("WorldBoundaryShape2D_o7b14")
-
-[connection signal="pressed" from="Player/Button" to="Player/Button" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
