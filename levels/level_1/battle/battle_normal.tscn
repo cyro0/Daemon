@@ -1,10 +1,107 @@
-[gd_scene load_steps=4 format=3 uid="uid://chh2uqsap64m"]
+[gd_scene load_steps=14 format=3 uid="uid://chh2uqsap64m"]
 
+[ext_resource type="Script" path="res://levels/level_1/battle/battle_normal.gd" id="1_cu8el"]
 [ext_resource type="TileSet" uid="uid://chgphnvipg4x8" path="res://levels/level_1/level1_home.tres" id="1_jrehu"]
 [ext_resource type="PackedScene" uid="uid://xxaoff7gwbrm" path="res://entities/player/player.tscn" id="2_oa7yr"]
 [ext_resource type="PackedScene" uid="uid://cw6ekyepny274" path="res://entities/enemies/snail/snail.tscn" id="3_wch3k"]
+[ext_resource type="AudioStream" uid="uid://cni3hdyo6oiwk" path="res://audio/battle/Mass Destruction -Reload-.mp3" id="5_qfo7u"]
+
+[sub_resource type="Gradient" id="Gradient_5yhak"]
+offsets = PackedFloat32Array(0.954545, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bb04f"]
+gradient = SubResource("Gradient_5yhak")
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_qph52"]
+resource_name = "move_blackscreen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-280, -155), Vector2(-588, -155)]
+}
+
+[sub_resource type="Animation" id="Animation_myigo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-248, -155)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1d1x"]
+_data = {
+"RESET": SubResource("Animation_myigo"),
+"move_blackscreen": SubResource("Animation_qph52")
+}
+
+[sub_resource type="Animation" id="Animation_2u4k0"]
+resource_name = "move_camera"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-70, -30), Vector2(45, -30)]
+}
+
+[sub_resource type="Animation" id="Animation_4wjhw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-77, -30)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ewyj"]
+_data = {
+"RESET": SubResource("Animation_4wjhw"),
+"move_camera": SubResource("Animation_2u4k0")
+}
 
 [node name="BattleNormal" type="Node2D"]
+script = ExtResource("1_cu8el")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 10
+offset_left = -248.0
+offset_top = -155.0
+offset_right = 153.0
+offset_bottom = 73.0
+texture = SubResource("GradientTexture2D_bb04f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+libraries = {
+"": SubResource("AnimationLibrary_o1d1x")
+}
+autoplay = "move_blackscreen"
 
 [node name="Map" type="TileMap" parent="."]
 tile_set = ExtResource("1_jrehu")
@@ -22,8 +119,15 @@ layer_3/z_index = 2
 layer_3/tile_data = PackedInt32Array(-262141, 851968, 6, -262140, 917504, 6, -262139, 1179648, 6, -327675, 1179648, 6, -327676, 1179648, 6, -327677, 1376256, 6)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -37)
+position = Vector2(-77, -30)
 zoom = Vector2(3.6, 3.6)
+position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+libraries = {
+"": SubResource("AnimationLibrary_3ewyj")
+}
+autoplay = "move_camera"
 
 [node name="Player" parent="." instance=ExtResource("2_oa7yr")]
 z_index = 5
@@ -31,3 +135,8 @@ position = Vector2(-77, -32)
 
 [node name="Snail" parent="." instance=ExtResource("3_wch3k")]
 position = Vector2(120, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qfo7u")
+volume_db = -12.0
+autoplay = true

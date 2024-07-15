@@ -15,6 +15,10 @@ run/main_scene="res://levels/level_1/level1_home.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioPlayer="*res://scenes/audio_player.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"
