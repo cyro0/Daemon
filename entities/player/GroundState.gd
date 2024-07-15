@@ -2,9 +2,9 @@ extends State
 
 class_name GroundState
 
-@export var jump_velocity : float = -300.0
+@export var jump_velocity : float = -150.0
 @export var air_state : State
-@export var jump_animation : String = "jump_start"
+@export var jump_animation : String = "jump"
 
 func state_process(delta):
 	if(!character.is_on_floor()):

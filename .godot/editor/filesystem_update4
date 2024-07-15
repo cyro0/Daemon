@@ -1,3 +1,6 @@
-res://entities/player.tscn
-res://entities/AirState.gd
+res://entities/player/player.tscn
 res://levels/level1_home.tscn
+res://levels/level_1/level1_home.tscn
+res://scenes/killzone.tscn
+res://scenes/killzone.gd
+res://entities/player/AirState.gd

@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://dg0iuu1frpu1o"]
+[gd_scene load_steps=12 format=3 uid="uid://dg0iuu1frpu1o"]
 
-[ext_resource type="Texture2D" uid="uid://ckxlxh4l724a" path="res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png" id="1_br4nx"]
-[ext_resource type="Texture2D" uid="uid://3splw6bnuiww" path="res://assets/uncolored_forest.png" id="2_hmbqb"]
-[ext_resource type="PackedScene" uid="uid://dnkiedtuaggo8" path="res://entities/player.tscn" id="3_l5x7n"]
+[ext_resource type="Texture2D" uid="uid://ckxlxh4l724a" path="res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png" id="1_xt6wy"]
+[ext_resource type="Texture2D" uid="uid://3splw6bnuiww" path="res://assets/uncolored_forest.png" id="2_emn6r"]
+[ext_resource type="PackedScene" uid="uid://xxaoff7gwbrm" path="res://entities/player/player.tscn" id="3_4e2yw"]
+[ext_resource type="PackedScene" uid="uid://cp3om70cuwqgl" path="res://scenes/killzone.tscn" id="4_87a6y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_42a26"]
-texture = ExtResource("1_br4nx")
+texture = ExtResource("1_xt6wy")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -638,9 +639,12 @@ _data = {
 "move_platform": SubResource("Animation_0fpl7")
 }
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o7b14"]
+distance = -203.0
+
 [node name="Home" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Map" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_p0yve")
 format = 2
 layer_0/name = "Ground"
@@ -655,31 +659,22 @@ layer_3/name = "Before_Ground2"
 layer_3/z_index = 2
 layer_3/tile_data = PackedInt32Array(-262141, 851968, 6, -262140, 917504, 6, -262139, 1179648, 6, -327675, 1179648, 6, -327676, 1179648, 6, -327677, 1376256, 6)
 
-[node name="Player" parent="." instance=ExtResource("3_l5x7n")]
-z_index = 100
-position = Vector2(-32, -32)
+[node name="Background" type="CanvasLayer" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, -59)
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background"]
 layer = -4
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/ParallaxBackground"]
 position = Vector2(4, 0)
 motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(815, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.726438, 0.178183, 0.272557, 1)
 texture_filter = 1
 position = Vector2(-4, -232)
 scale = Vector2(0.8, 0.507812)
-texture = ExtResource("2_hmbqb")
+texture = ExtResource("2_emn6r")
 centered = false
 
 [node name="MovingPlattform1" type="AnimatableBody2D" parent="."]
@@ -692,7 +687,7 @@ one_way_collision = true
 
 [node name="Sprite2D" type="Sprite2D" parent="MovingPlattform1"]
 position = Vector2(-296, -43.5)
-texture = ExtResource("1_br4nx")
+texture = ExtResource("1_xt6wy")
 region_enabled = true
 region_rect = Rect2(0, 13, 80, 9)
 
@@ -701,3 +696,19 @@ libraries = {
 "": SubResource("AnimationLibrary_ijbyo")
 }
 autoplay = "move_platform"
+
+[node name="Player" parent="." instance=ExtResource("3_4e2yw")]
+z_index = 5
+position = Vector2(-49, -32)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -36)
+zoom = Vector2(2, 2)
+limit_bottom = 128
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Killzone" parent="." instance=ExtResource("4_87a6y")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_o7b14")

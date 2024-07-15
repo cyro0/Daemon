@@ -5,7 +5,7 @@ class_name AirState
 @export var landing_state : State
 @export var double_jump_velocity : float = -100
 @export var double_jump_animation : String = "double_jump"
-@export var landing_animation : String = "land"
+@export var landing_animation : String = "landing"
 
 var has_double_jumped = false
 
