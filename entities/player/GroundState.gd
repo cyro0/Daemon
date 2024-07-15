@@ -6,7 +6,6 @@ class_name GroundState
 @export var air_state : State
 @export var jump_animation : String = "jump"
 @export var move_animation : String = "Move"
-var ground_loaded_on_init : bool = true
 
 func state_process(delta):
 	if(!character.is_on_floor()):
@@ -22,10 +21,7 @@ func jump():
 	playback.travel(jump_animation)
 	
 func on_enter():
-	if (ground_loaded_on_init):
-		ground_loaded_on_init = false
-	else:
-		playback.travel("land")
+	playback.travel("land")
 
 	
 	

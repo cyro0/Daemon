@@ -17,3 +17,6 @@ func fade_out_and_in():
 func _on_animation_player_animation_finished(anim_name):
 	if (scene_to_load != null && anim_name == "fade_out"):
 		get_tree().change_scene_to_packed(scene_to_load)
+
+func _on_snail_body_entered(body):
+	fade_out_and_in()

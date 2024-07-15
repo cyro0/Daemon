@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://3splw6bnuiww" path="res://assets/uncolored_forest.png" id="2_emn6r"]
 [ext_resource type="PackedScene" uid="uid://xxaoff7gwbrm" path="res://entities/player/player.tscn" id="3_4e2yw"]
 [ext_resource type="PackedScene" uid="uid://cp3om70cuwqgl" path="res://scenes/killzone.tscn" id="4_87a6y"]
-[ext_resource type="Script" path="res://levels/level_1/BattleTransitionTest.gd" id="5_3ldoo"]
 [ext_resource type="PackedScene" uid="uid://80l5qa3yt511" path="res://ui/Transition_to_Battle_Normal.tscn" id="6_abpxw"]
 [ext_resource type="PackedScene" uid="uid://chh2uqsap64m" path="res://levels/battle/battle_normal.tscn" id="7_wju1v"]
+[ext_resource type="PackedScene" uid="uid://cw6ekyepny274" path="res://entities/enemies/snail/snail.tscn" id="9_iycnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7lsb1"]
 size = Vector2(80, 8)
@@ -119,17 +119,6 @@ limit_bottom = 128
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="Button" type="Button" parent="Player" node_paths=PackedStringArray("transitioner")]
-offset_left = -90.0
-offset_top = -3.0
-offset_right = -25.0
-offset_bottom = 28.0
-focus_mode = 0
-action_mode = 0
-text = "BATTLE"
-script = ExtResource("5_3ldoo")
-transitioner = NodePath("../TransitionToBattleNormal")
-
 [node name="TransitionToBattleNormal" parent="Player" instance=ExtResource("6_abpxw")]
 offset_left = 3.0
 offset_top = 9.0
@@ -142,4 +131,8 @@ scene_to_load = ExtResource("7_wju1v")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_o7b14")
 
-[connection signal="pressed" from="Player/Button" to="Player/Button" method="_on_pressed"]
+[node name="Snail" parent="." instance=ExtResource("9_iycnq")]
+position = Vector2(140, 0)
+script = null
+
+[connection signal="body_entered" from="Snail" to="Player/TransitionToBattleNormal" method="_on_snail_body_entered"]

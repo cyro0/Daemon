@@ -8,3 +8,5 @@ res://levels/level_1/BattleTransitionTest.gd
 res://ui/Transition_to_Battle_Normal.gd
 res://ui/Timer.gd
 res://levels/battle/battle_normal.gd
+res://entities/enemies/snail/snail.gd
+res://entities/player/GroundState.gd

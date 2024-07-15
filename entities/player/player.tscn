@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://xxaoff7gwbrm"]
+[gd_scene load_steps=32 format=3 uid="uid://xxaoff7gwbrm"]
 
 [ext_resource type="Script" path="res://entities/player/player.gd" id="1_flj5s"]
 [ext_resource type="Texture2D" uid="uid://daoi60guy2euw" path="res://assets/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png" id="1_uohqy"]
@@ -275,8 +275,6 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t0fre"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8ktqt"]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1rr6u"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sev3m"]
@@ -295,7 +293,7 @@ states/jump_start/node = SubResource("AnimationNodeAnimation_lg01u")
 states/jump_start/position = Vector2(392, -6)
 states/land/node = SubResource("AnimationNodeAnimation_i5ogp")
 states/land/position = Vector2(564, 100)
-transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition_i4ph4"), "Move", "jump_start", SubResource("AnimationNodeStateMachineTransition_2puwh"), "jump_start", "double_jump", SubResource("AnimationNodeStateMachineTransition_kd0lq"), "jump_start", "Move", SubResource("AnimationNodeStateMachineTransition_t0fre"), "double_jump", "Move", SubResource("AnimationNodeStateMachineTransition_8ktqt"), "double_jump", "land", SubResource("AnimationNodeStateMachineTransition_1rr6u"), "land", "Move", SubResource("AnimationNodeStateMachineTransition_sev3m"), "jump_start", "land", SubResource("AnimationNodeStateMachineTransition_uqmkw")]
+transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition_i4ph4"), "Move", "jump_start", SubResource("AnimationNodeStateMachineTransition_2puwh"), "jump_start", "double_jump", SubResource("AnimationNodeStateMachineTransition_kd0lq"), "jump_start", "Move", SubResource("AnimationNodeStateMachineTransition_t0fre"), "double_jump", "land", SubResource("AnimationNodeStateMachineTransition_1rr6u"), "land", "Move", SubResource("AnimationNodeStateMachineTransition_sev3m"), "jump_start", "land", SubResource("AnimationNodeStateMachineTransition_uqmkw")]
 graph_offset = Vector2(-37, -43)
 
 [node name="Player" type="CharacterBody2D"]
@@ -331,6 +329,7 @@ current_state = NodePath("Ground")
 
 [node name="Ground" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("air_state")]
 script = ExtResource("8_yi76h")
+jump_velocity = -850.0
 air_state = NodePath("../Air")
 jump_animation = "jump_start"
 
