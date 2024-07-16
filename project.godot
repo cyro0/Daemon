@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-AudioPlayer="*res://scenes/audio_player.tscn"
+SwitchScene="*res://global/switch_scene.gd"
+AudioPlayer="*res://global/audio_player.gd"
 
 [display]
 

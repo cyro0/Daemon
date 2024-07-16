@@ -44,7 +44,7 @@ _data = {
 "idle": SubResource("Animation_pahqg")
 }
 
-[node name="Demise" type="Area2D"]
+[node name="Demise" type="Area2D" groups=["boss_enemy"]]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

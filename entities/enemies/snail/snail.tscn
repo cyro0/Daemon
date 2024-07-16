@@ -1,17 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://cw6ekyepny274"]
 
 [ext_resource type="Texture2D" uid="uid://cyham1jcje8q4" path="res://assets/Legacy-Fantasy - High Forest 2.3/Mob/Snail/all.png" id="1_m1fas"]
-
-[sub_resource type="GDScript" id="GDScript_pxm1c"]
-script/source = "extends Area2D
-"
+[ext_resource type="Script" path="res://entities/enemies/snail/snail.gd" id="1_mf5jk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmp16"]
 size = Vector2(32, 24)
 
-[node name="Snail" type="Area2D"]
+[node name="Snail" type="Area2D" groups=["normal_enemy"]]
 collision_mask = 2
-script = SubResource("GDScript_pxm1c")
+script = ExtResource("1_mf5jk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -12)

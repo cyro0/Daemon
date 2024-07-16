@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnnwco30eaapi"]
+
+[ext_resource type="PackedScene" uid="uid://80l5qa3yt511" path="res://ui/TransitionToBattle.tscn" id="1_klcnj"]
+
+[node name="StandardCamera" type="Camera2D"]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="TransitionToBattleNormal" parent="." instance=ExtResource("1_klcnj")]
+visible = false

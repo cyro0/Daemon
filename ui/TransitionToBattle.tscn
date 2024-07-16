@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://80l5qa3yt511"]
 
-[ext_resource type="Script" path="res://ui/Transition_to_Battle_Normal.gd" id="1_o7dmq"]
+[ext_resource type="Script" path="res://ui/TransitionToBattle.gd" id="1_boja2"]
 
 [sub_resource type="Gradient" id="Gradient_5bibc"]
 interpolation_mode = 1
@@ -82,7 +82,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_o7dmq")
+script = ExtResource("1_boja2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dg0iuu1frpu1o"]
+[gd_scene load_steps=16 format=3 uid="uid://dg0iuu1frpu1o"]
 
 [ext_resource type="Script" path="res://levels/level_1/level1_home.gd" id="1_8ja8k"]
 [ext_resource type="TileSet" uid="uid://chgphnvipg4x8" path="res://levels/level_1/level1_home.tres" id="1_elwaf"]
@@ -6,14 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://3splw6bnuiww" path="res://assets/uncolored_forest.png" id="2_emn6r"]
 [ext_resource type="PackedScene" uid="uid://xxaoff7gwbrm" path="res://entities/player/player.tscn" id="3_4e2yw"]
 [ext_resource type="PackedScene" uid="uid://cp3om70cuwqgl" path="res://scenes/killzone.tscn" id="4_87a6y"]
-[ext_resource type="PackedScene" uid="uid://80l5qa3yt511" path="res://ui/Transition_to_Battle_Normal.tscn" id="6_abpxw"]
-[ext_resource type="PackedScene" uid="uid://chh2uqsap64m" path="res://levels/level_1/battle/battle_normal.tscn" id="7_wju1v"]
+[ext_resource type="PackedScene" uid="uid://80l5qa3yt511" path="res://ui/TransitionToBattle.tscn" id="6_oyug1"]
 [ext_resource type="PackedScene" uid="uid://cw6ekyepny274" path="res://entities/enemies/snail/snail.tscn" id="9_iycnq"]
 [ext_resource type="AudioStream" uid="uid://dlypta8rj8551" path="res://audio/level1/Heaven.mp3" id="10_1jaqp"]
 [ext_resource type="Script" path="res://levels/level_1/AudioStreamPlayer.gd" id="11_ixnih"]
-[ext_resource type="PackedScene" uid="uid://uq02uwrlq78o" path="res://entities/enemies/demise/demise.tscn" id="12_g6q8d"]
-[ext_resource type="PackedScene" uid="uid://b21typ8idwm18" path="res://ui/Transition_to_Battle_Boss.tscn" id="13_x251x"]
-[ext_resource type="PackedScene" uid="uid://d18tw32ibce1h" path="res://levels/level_1/battle/battle_boss.tscn" id="14_sg0kj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7lsb1"]
 size = Vector2(80, 8)
@@ -119,42 +115,24 @@ autoplay = "move_platform"
 z_index = 5
 position = Vector2(-49, -32)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, -36)
+[node name="StandardCamera" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
-limit_bottom = 128
-limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="TransitionToBattleNormal" parent="Player" instance=ExtResource("6_abpxw")]
-offset_left = 3.0
-offset_top = 9.0
-offset_right = 3.0
-offset_bottom = 9.0
-scene_to_load = ExtResource("7_wju1v")
+[node name="TransitionToBattleNormal" parent="Player/StandardCamera" instance=ExtResource("6_oyug1")]
+visible = false
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Snail" parent="Enemies" instance=ExtResource("9_iycnq")]
 
 [node name="Killzone" parent="." instance=ExtResource("4_87a6y")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_o7b14")
 
-[node name="Snail" parent="." instance=ExtResource("9_iycnq")]
-position = Vector2(140, 0)
-script = null
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_1jaqp")
 volume_db = -12.0
 autoplay = true
 script = ExtResource("11_ixnih")
-
-[node name="Demise" parent="." instance=ExtResource("12_g6q8d")]
-position = Vector2(209, 0)
-
-[node name="TransitionToBattleNormal" parent="Demise" instance=ExtResource("13_x251x")]
-z_index = 10
-scene_to_load = ExtResource("14_sg0kj")
-
-[connection signal="focus_entered" from="Player/TransitionToBattleNormal" to="AudioStreamPlayer" method="_on_transition_to_battle_normal_focus_entered"]
-[connection signal="body_entered" from="Snail" to="Player/TransitionToBattleNormal" method="_on_snail_body_entered"]
-[connection signal="body_entered" from="Demise" to="Demise/TransitionToBattleNormal" method="_on_demise_body_entered"]
