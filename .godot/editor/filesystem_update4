@@ -4,3 +4,4 @@ res://levels/level_1/level1_home.tscn
 res://entities/player/player.tscn
 res://entities/player/CharacterStateMachine.gd
 res://entities/player/player.gd
+res://entities/player/player_inbattle.tscn
