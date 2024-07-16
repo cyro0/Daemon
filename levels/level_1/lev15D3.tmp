@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dg0iuu1frpu1o"]
+[gd_scene load_steps=17 format=3 uid="uid://dg0iuu1frpu1o"]
 
 [ext_resource type="Script" path="res://levels/level_1/level1_home.gd" id="1_8ja8k"]
 [ext_resource type="TileSet" uid="uid://chgphnvipg4x8" path="res://levels/level_1/level1_home.tres" id="1_elwaf"]
@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://3splw6bnuiww" path="res://assets/uncolored_forest.png" id="2_emn6r"]
 [ext_resource type="PackedScene" uid="uid://xxaoff7gwbrm" path="res://entities/player/player.tscn" id="3_4e2yw"]
 [ext_resource type="PackedScene" uid="uid://cp3om70cuwqgl" path="res://scenes/killzone.tscn" id="4_87a6y"]
+[ext_resource type="PackedScene" uid="uid://chh2uqsap64m" path="res://levels/level_1/battle/battle_normal.tscn" id="7_wju1v"]
 [ext_resource type="PackedScene" uid="uid://cw6ekyepny274" path="res://entities/enemies/snail/snail.tscn" id="9_iycnq"]
 [ext_resource type="AudioStream" uid="uid://dlypta8rj8551" path="res://audio/level1/Heaven.mp3" id="10_1jaqp"]
 [ext_resource type="Script" path="res://levels/level_1/AudioStreamPlayer.gd" id="11_ixnih"]
+[ext_resource type="PackedScene" uid="uid://d18tw32ibce1h" path="res://levels/level_1/battle/battle_boss.tscn" id="14_sg0kj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7lsb1"]
 size = Vector2(80, 8)
@@ -56,6 +58,8 @@ distance = -203.0
 
 [node name="Home" type="Node2D"]
 script = ExtResource("1_8ja8k")
+normal_battle_scene = ExtResource("7_wju1v")
+boss_battle_scene = ExtResource("14_sg0kj")
 
 [node name="Map" type="TileMap" parent="."]
 tile_set = ExtResource("1_elwaf")
@@ -136,3 +140,5 @@ script = ExtResource("11_ixnih")
 
 [node name="Snail" parent="Enemies" instance=ExtResource("9_iycnq")]
 position = Vector2(119, 0)
+
+[connection signal="body_entered" from="Enemies/Snail" to="Player" method="_on_snail_body_entered"]

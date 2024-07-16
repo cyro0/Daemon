@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 @export var speed : float = 200.0
 
 @onready var sprite : Sprite2D = $Sprite2D
@@ -40,3 +42,7 @@ func update_facing_direction():
 		sprite.flip_h = false
 	elif direction.x < 0:
 		sprite.flip_h = true
+
+
+func _on_snail_body_entered(body):
+	print("bruh")

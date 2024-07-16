@@ -296,7 +296,7 @@ states/land/position = Vector2(564, 100)
 transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition_i4ph4"), "Move", "jump_start", SubResource("AnimationNodeStateMachineTransition_2puwh"), "jump_start", "double_jump", SubResource("AnimationNodeStateMachineTransition_kd0lq"), "jump_start", "Move", SubResource("AnimationNodeStateMachineTransition_t0fre"), "double_jump", "land", SubResource("AnimationNodeStateMachineTransition_1rr6u"), "land", "Move", SubResource("AnimationNodeStateMachineTransition_sev3m"), "jump_start", "land", SubResource("AnimationNodeStateMachineTransition_uqmkw")]
 graph_offset = Vector2(-77, -40)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(0, -32)
 collision_layer = 2
 script = ExtResource("1_flj5s")

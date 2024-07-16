@@ -12,3 +12,8 @@ res://ui/Transition_to_Battle_Normal.gd
 res://ui/Transition_to_Battle_Boss.gd
 res://ui/Transition/Transition.tscn
 res://entities/player/AirState.gd
+res://scenes/global/scene_switcher.gd
+res://levels/level_1/level1_home.gd
+res://entities/enemies/snail/snail.gd
+res://entities/enemies/enemies.gd
+res://entities/player/player.gd

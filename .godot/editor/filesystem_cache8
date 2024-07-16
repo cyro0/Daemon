@@ -1,7 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721112096
+::res://::1721116165
 export_presets.cfg::TextFile::-1::1721064380::0::1::::<><>::
 icon.svg::CompressedTexture2D::1837649606047918270::1720982746::1721072447::1::::<><>::
+scene_switcher.gd::GDScript::-1::1721116163::0::1::::<>Node<>::
 ::res://assets/::1721072854
 Unbenannt.JPG::CompressedTexture2D::641283945884588548::1720991281::1720991285::1::::<><>::
 uncolored_forest.png::CompressedTexture2D::2003378023528677490::1720697506::1720991812::1::::<><>::
@@ -216,8 +217,8 @@ Heaven.mp3::AudioStreamMP3::7981829133935091718::1721059832::1721060118::1::::<>
 demise.tscn::PackedScene::1438374143320666816::1721114920::0::1::::<><>::uid://dirkwgeml4lv2::::res://assets/Bringer-Of-Death/Bringer-Of-Death/SpriteSheet/Bringer-of-Death-SpritSheet.png
 ::res://entities/enemies/snail/::1721114920
 snail.tscn::PackedScene::6381253631148382905::1721114920::0::1::::<><>::uid://cyham1jcje8q4::::res://assets/Legacy-Fantasy - High Forest 2.3/Mob/Snail/all.png
-::res://entities/player/::1721114920
-AirState.gd::GDScript::-1::1721036511::0::1::::AirState<>State<>::
+::res://entities/player/::1721115927
+AirState.gd::GDScript::-1::1721115927::0::1::::AirState<>State<>::
 CharacterStateMachine.gd::GDScript::-1::1721031747::0::1::::CharacterStateMachine<>Node<>::
 GroundState.gd::GDScript::-1::1721055448::0::1::::GroundState<>State<>::
 player.gd::GDScript::-1::1721031747::0::1::::<>CharacterBody2D<>::
@@ -236,11 +237,14 @@ battle_boss.tscn::PackedScene::9053490874609015403::1721114920::0::1::::<><>::re
 battle_normal.gd::GDScript::-1::1721058086::0::1::::<>Node2D<>::
 battle_normal.tscn::PackedScene::155302642941618202::1721114920::0::1::::<><>::res://levels/level_1/battle/battle_normal.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://xxaoff7gwbrm::::res://entities/player/player.tscn<>uid://cw6ekyepny274::::res://entities/enemies/snail/snail.tscn<>uid://cni3hdyo6oiwk::::res://audio/battle/Mass Destruction -Reload-.mp3
 ::res://menus/::1721077887
-::res://scenes/::1721114920
-audio_player.gd::GDScript::-1::1721062163::0::1::::<>AudioStreamPlayer2D<>::
-audio_player.tscn::PackedScene::8075555364343631384::1721114920::0::1::::<><>::res://scenes/audio_player.gd
+::res://scenes/::1721116139
 killzone.gd::GDScript::-1::1721033225::0::1::::<>Area2D<>::
 killzone.tscn::PackedScene::5884349785981746823::1721034897::0::1::::<><>::res://scenes/killzone.gd
-::res://ui/::1721115704
-Transition.tscn::PackedScene::1710159781606959731::1721115557::0::1::::<><>::
-::res://ui/Transition/::1721115704
+::res://scenes/global/::1721116139
+audio_player.gd::GDScript::-1::1721062163::0::1::::<>AudioStreamPlayer2D<>::
+audio_player.tscn::PackedScene::8075555364343631384::1721116139::0::1::::<><>::res://scenes/global/audio_player.gd
+::res://ui/::1721115706
+::res://ui/Transition/::1721115927
+Battle.gd::GDScript::-1::1721115716::0::1::::<>Node<>::
+Overworld.gd::GDScript::-1::1721115722::0::1::::<>Node<>::
+Transition.tscn::PackedScene::1710159781606959731::1721115927::0::1::::<><>::
