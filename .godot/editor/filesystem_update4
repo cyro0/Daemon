@@ -7,8 +7,8 @@ res://ui/Transition_to_Battle_Normal.tscn
 res://scenes/audio_player.tscn
 res://entities/enemies/demise/demise.tscn
 res://levels/level_1/battle/battle_boss.tscn
-res://menus/Transition_to_Battle_Normal.tscn
-res://menus/Transition_to_Battle_Boss.tscn
 res://ui/Transition_to_Battle_Boss.tscn
 res://ui/Transition_to_Battle_Normal.gd
-res://levels/level_1/battle/battle_boss.gd
+res://ui/Transition_to_Battle_Boss.gd
+res://ui/Transition/Transition.tscn
+res://entities/player/AirState.gd

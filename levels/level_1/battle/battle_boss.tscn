@@ -14,6 +14,21 @@ offsets = PackedFloat32Array(0.922078, 1)
 gradient = SubResource("Gradient_xvi1i")
 fill_to = Vector2(0, 0)
 
+[sub_resource type="Animation" id="Animation_nscti"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-534, -30)]
+}
+
 [sub_resource type="Animation" id="Animation_pcux0"]
 resource_name = "move_camera"
 length = 2.0
@@ -28,21 +43,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-534, -30), Vector2(-75, -30)]
-}
-
-[sub_resource type="Animation" id="Animation_nscti"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-534, -30)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ubw2l"]
