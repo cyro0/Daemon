@@ -1,12 +1,15 @@
-[gd_scene format=3 uid="uid://ymoc1q6t2aw6"]
+[gd_scene load_steps=2 format=3 uid="uid://ymoc1q6t2aw6"]
 
-[node name="Transition" type="Control"]
+[ext_resource type="Script" path="res://ui/Transition/TransitionHandler.gd" id="1_bjp31"]
+
+[node name="TransitionHandler" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bjp31")
 
 [node name="Battle" type="Control" parent="."]
 anchors_preset = 0

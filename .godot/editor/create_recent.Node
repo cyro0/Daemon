@@ -1,9 +1,9 @@
+Node2D
 Node
 Area2D
 Control
 AnimationPlayer
 TextureRect
-Node2D
 Sprite2D
 CollisionShape2D
 AudioStreamPlayer
