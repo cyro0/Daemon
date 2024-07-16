@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://d18tw32ibce1h"]
+[gd_scene load_steps=11 format=3 uid="uid://d18tw32ibce1h"]
 
 [ext_resource type="Script" path="res://levels/level_1/battle/battle_boss.gd" id="1_dvxtd"]
 [ext_resource type="TileSet" uid="uid://chgphnvipg4x8" path="res://levels/level_1/level1_home.tres" id="1_nsxqd"]
-[ext_resource type="PackedScene" uid="uid://xxaoff7gwbrm" path="res://entities/player/player.tscn" id="2_fkdbb"]
 [ext_resource type="PackedScene" uid="uid://uq02uwrlq78o" path="res://entities/enemies/demise/demise.tscn" id="3_hdrdj"]
 [ext_resource type="AudioStream" uid="uid://bdf7q0ossjqbt" path="res://audio/boss_battle/Its_going_down_now.mp3" id="4_t5d2s"]
 [ext_resource type="Texture2D" uid="uid://3splw6bnuiww" path="res://assets/uncolored_forest.png" id="5_cf3x4"]
@@ -13,6 +12,21 @@ offsets = PackedFloat32Array(0.922078, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_0r45f"]
 gradient = SubResource("Gradient_xvi1i")
 fill_to = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_nscti"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-534, -30)]
+}
 
 [sub_resource type="Animation" id="Animation_pcux0"]
 resource_name = "move_camera"
@@ -28,21 +42,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-534, -30), Vector2(-75, -30)]
-}
-
-[sub_resource type="Animation" id="Animation_nscti"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-534, -30)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ubw2l"]
@@ -68,9 +67,6 @@ layer_2/tile_data = PackedInt32Array()
 layer_3/name = "Before_Ground2"
 layer_3/z_index = 2
 layer_3/tile_data = PackedInt32Array()
-
-[node name="Player" parent="." instance=ExtResource("2_fkdbb")]
-position = Vector2(-172, -32)
 
 [node name="Demise" parent="." instance=ExtResource("3_hdrdj")]
 

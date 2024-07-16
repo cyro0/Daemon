@@ -4,14 +4,17 @@ extends Control
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var transition_fx = preload("res://audio/battle/Encounter.mp3")
 
-var root_node : Node = get_tree().root.get_child(0)
+var res_path_normal_battle : PackedScene
+var res_path_boss_battle : PackedScene
+
 var normal_enemy_group : String = "normal_enemy"
 var boss_enemy_group : String = "boss_enemy"
-var res_path_normal_battle : String = root_node.battle_normal_scene.resource_path
-var res_path_boss_battle : String = root_node.battle_boss_scene.resource_path
 var res_path : String
 
 func _ready():
+	await owner.ready
+	res_path_normal_battle = owner.battle
+	res_path_boss_battle = owner.boss_battle
 	self.visible = true
 	animation_tex.visible = false
 	
@@ -20,11 +23,11 @@ func transition(caller):
 		AudioPlayer.play_FX(transition_fx, -12.0)
 		Engine.time_scale = 0.1
 		if (caller.is_in_group(normal_enemy_group)):
-			res_path = res_path_normal_battle
+			res_path = res_path_normal_battle.resource_path
 			animation_player.play("fade_out")
 			
 		elif (caller.is_in_group(boss_enemy_group)):
-			res_path = res_path_boss_battle
+			res_path = res_path_boss_battle.resource_path
 			animation_player.play("fade_out")
 	else:
 		print_debug("Cant play transition scene. Caller not Found")
