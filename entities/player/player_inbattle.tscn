@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://cyfthfkyonmnl"]
+[gd_scene load_steps=13 format=3 uid="uid://cyfthfkyonmnl"]
 
+[ext_resource type="Script" path="res://entities/player/player_inbattle.gd" id="1_wty0g"]
 [ext_resource type="Texture2D" uid="uid://daoi60guy2euw" path="res://assets/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png" id="2_58a0r"]
 [ext_resource type="Texture2D" uid="uid://blmqhdbs5nna5" path="res://assets/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png" id="3_8xhsr"]
 [ext_resource type="Texture2D" uid="uid://ddf58tj176vr6" path="res://assets/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png" id="4_0pvmr"]
@@ -233,66 +234,10 @@ _data = {
 "run": SubResource("Animation_x4w03")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ehi1k"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_px41x"]
-animation = &"run"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7r4he"]
-animation = &"run"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_bjy5n"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_ehi1k")
-blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_px41x")
-blend_point_1/pos = 1.0
-blend_point_2/node = SubResource("AnimationNodeAnimation_7r4he")
-blend_point_2/pos = -1.0
-blend_mode = 1
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1hyex"]
-animation = &"double_jump"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lg01u"]
-animation = &"jump_start"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i5ogp"]
-animation = &"jump_end"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i4ph4"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2puwh"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kd0lq"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t0fre"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1rr6u"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sev3m"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uqmkw"]
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_haosr"]
-states/End/position = Vector2(377, 178)
-states/Move/node = SubResource("AnimationNodeBlendSpace1D_bjy5n")
-states/Move/position = Vector2(392, 100)
-states/double_jump/node = SubResource("AnimationNodeAnimation_1hyex")
-states/double_jump/position = Vector2(564, -6)
-states/jump_start/node = SubResource("AnimationNodeAnimation_lg01u")
-states/jump_start/position = Vector2(392, -6)
-states/land/node = SubResource("AnimationNodeAnimation_i5ogp")
-states/land/position = Vector2(564, 100)
-transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition_i4ph4"), "Move", "jump_start", SubResource("AnimationNodeStateMachineTransition_2puwh"), "jump_start", "double_jump", SubResource("AnimationNodeStateMachineTransition_kd0lq"), "jump_start", "Move", SubResource("AnimationNodeStateMachineTransition_t0fre"), "double_jump", "land", SubResource("AnimationNodeStateMachineTransition_1rr6u"), "land", "Move", SubResource("AnimationNodeStateMachineTransition_sev3m"), "jump_start", "land", SubResource("AnimationNodeStateMachineTransition_uqmkw")]
-graph_offset = Vector2(-37, -43)
-
 [node name="Player" type="Area2D"]
-position = Vector2(0, -32)
+position = Vector2(-320, -32)
 collision_layer = 2
+script = ExtResource("1_wty0g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
@@ -300,16 +245,11 @@ shape = SubResource("RectangleShape2D_0omfb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-32, -32)
-texture = ExtResource("2_58a0r")
+texture = ExtResource("4_0pvmr")
 centered = false
-hframes = 4
+hframes = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_0dkb2")
 }
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_haosr")
-anim_player = NodePath("../AnimationPlayer")
-parameters/Move/blend_position = 0.0247229

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://levels/level_1/battle/battle_normal.gd" id="1_cu8el"]
 [ext_resource type="TileSet" uid="uid://chgphnvipg4x8" path="res://levels/level_1/level1_home.tres" id="1_jrehu"]
-[ext_resource type="PackedScene" uid="uid://xxaoff7gwbrm" path="res://entities/player/player.tscn" id="2_oa7yr"]
 [ext_resource type="PackedScene" uid="uid://cw6ekyepny274" path="res://entities/enemies/snail/snail.tscn" id="3_wch3k"]
+[ext_resource type="PackedScene" uid="uid://cyfthfkyonmnl" path="res://entities/player/player_inbattle.tscn" id="5_h01kl"]
 [ext_resource type="AudioStream" uid="uid://cni3hdyo6oiwk" path="res://audio/battle/Mass Destruction -Reload-.mp3" id="5_qfo7u"]
 
 [sub_resource type="Gradient" id="Gradient_norbw"]
@@ -86,8 +86,9 @@ _data = {
 "move_camera": SubResource("Animation_2u4k0")
 }
 
-[node name="BattleNormal" type="Node2D"]
+[node name="BattleNormal" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_cu8el")
+player = NodePath("Player")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = 10
@@ -129,10 +130,6 @@ libraries = {
 }
 autoplay = "move_camera"
 
-[node name="Player" parent="." instance=ExtResource("2_oa7yr")]
-z_index = 5
-position = Vector2(-77, -32)
-
 [node name="Snail" parent="." instance=ExtResource("3_wch3k")]
 position = Vector2(120, 0)
 
@@ -140,3 +137,7 @@ position = Vector2(120, 0)
 stream = ExtResource("5_qfo7u")
 volume_db = -12.0
 autoplay = true
+
+[node name="Player" parent="." instance=ExtResource("5_h01kl")]
+
+[connection signal="animation_finished" from="TextureRect/AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]
