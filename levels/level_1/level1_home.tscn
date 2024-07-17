@@ -114,7 +114,7 @@ autoplay = "move_platform"
 
 [node name="Player" parent="." instance=ExtResource("3_4e2yw")]
 z_index = 5
-position = Vector2(-49, -32)
+position = Vector2(-224, -32)
 
 [node name="StandardCamera" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)

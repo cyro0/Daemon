@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721219056
+::res://::1721246436
 export_presets.cfg::TextFile::-1::1721064380::0::1::::<><>::
 icon.svg::CompressedTexture2D::1837649606047918270::1720982746::1721072447::1::::<><>::
 ::res://assets/::1721072854
@@ -147,7 +147,7 @@ Props-Rocks.png::CompressedTexture2D::8508633013310560230::1720982909::172098291
 Tiles.png::CompressedTexture2D::6059132405264590811::1720982909::1720982910::1::::<><>::
 Tree-Assets.png::CompressedTexture2D::1983798541762577895::1720982909::1720982910::1::::<><>::
 ::res://assets/Legacy-Fantasy - High Forest 2.3/Background/::1720991053
-::res://assets/Legacy-Fantasy - High Forest 2.3/Character/::1720982909
+::res://assets/Legacy-Fantasy - High Forest 2.3/Character/::1721234777
 ::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Attack-01/::1720982910
 Attack-01-Sheet.png::CompressedTexture2D::6232872247768398401::1720982909::1720982910::1::::<><>::
 ::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Dead/::1720982910
@@ -221,14 +221,13 @@ demise.tscn::PackedScene::1438374143320666816::1721218365::0::1::::<><>::res://e
 ::res://entities/enemies/snail/::1721218365
 snail.gd::GDScript::-1::1721218549::0::1::::<>Enemy<>::
 snail.tscn::PackedScene::6381253631148382905::1721218558::0::1::::<><>::uid://cyham1jcje8q4::::res://assets/Legacy-Fantasy - High Forest 2.3/Mob/Snail/all.png<>res://entities/enemies/snail/snail.gd
-::res://entities/player/::1721218995
+::res://entities/player/::1721246526
 AirState.gd::GDScript::-1::1721115927::0::1::::AirState<>State<>::
 CharacterStateMachine.gd::GDScript::-1::1721153219::0::1::::CharacterStateMachine<>Node<>::
 GroundState.gd::GDScript::-1::1721055448::0::1::::GroundState<>State<>::
-player.gd::GDScript::-1::1721218351::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::1661849364936379042::1721218995::0::1::::<><>::res://entities/player/player.gd<>uid://daoi60guy2euw::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>uid://ddf58tj176vr6::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png<>uid://blmqhdbs5nna5::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>res://entities/player/CharacterStateMachine.gd<>res://entities/player/GroundState.gd<>res://entities/player/AirState.gd<>res://entities/player/StateDebugLabel.gd
-player_inbattle.gd::GDScript::-1::1721218365::0::1::::<>Area2D<>::
-player_inbattle.tscn::PackedScene::6468861906063654333::1721218995::0::1::::<><>::res://entities/player/player_inbattle.gd<>uid://daoi60guy2euw::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>uid://blmqhdbs5nna5::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>uid://ddf58tj176vr6::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png
+player.gd::GDScript::-1::1721246573::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::1661849364936379042::1721246583::0::1::::<><>::res://entities/player/player.gd<>uid://daoi60guy2euw::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>uid://ddf58tj176vr6::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png<>uid://blmqhdbs5nna5::::res://assets/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>res://entities/player/CharacterStateMachine.gd<>res://entities/player/Battle.gd<>res://entities/player/GroundState.gd<>res://entities/player/AirState.gd<>res://entities/player/StateDebugLabel.gd
+Battle.gd::GDScript::-1::1721246573::0::1::::BattleState<>State<>::
 State.gd::GDScript::-1::1721037166::0::1::::State<>Node<>::
 StateDebugLabel.gd::GDScript::-1::1721031747::0::1::::<>Label<>::
 ::res://global/::1721218365
@@ -236,18 +235,18 @@ audio_player.gd::GDScript::-1::1721218365::0::1::::<>AudioStreamPlayer2D<>::
 audio_player.tscn::PackedScene::8075555364343631384::1721218365::0::1::::<><>::
 switch_scene.gd::GDScript::-1::1721218365::0::1::::<>Node<>::
 ::res://levels/::1721059622
-::res://levels/level_1/::1721218995
+::res://levels/level_1/::1721246526
 AudioStreamPlayer.gd::GDScript::-1::1721062707::0::1::::<>AudioStreamPlayer<>::
 level1_home.gd::GDScript::-1::1721218571::0::1::::<>Node2D<>::
-level1_home.tres::TileSet::5277473510453861891::1721218995::0::1::::<><>::uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png<>uid://colr2mxq58i4y::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Buildings.png<>uid://dthv7bwbq8ip7::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Props-Rocks.png<>uid://cslda4o38du0r::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png<>uid://3i74wg3n83xr::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Tree-Assets.png
-level1_home.tscn::PackedScene::7632527099461647610::1721218994::0::1::::<><>::res://levels/level_1/level1_home.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png<>uid://3splw6bnuiww::::res://assets/uncolored_forest.png<>uid://xxaoff7gwbrm::::res://entities/player/player.tscn<>uid://cp3om70cuwqgl::::res://scenes/killzone.tscn<>uid://80l5qa3yt511::::res://ui/TransitionToBattle.tscn<>uid://uq02uwrlq78o::::res://entities/enemies/demise/demise.tscn<>uid://cw6ekyepny274::::res://entities/enemies/snail/snail.tscn<>uid://dlypta8rj8551::::res://audio/level1/Heaven.mp3<>res://levels/level_1/AudioStreamPlayer.gd
-::res://levels/level_1/battle/::1721218995
+level1_home.tres::TileSet::5277473510453861891::1721246444::0::1::::<><>::uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png<>uid://colr2mxq58i4y::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Buildings.png<>uid://dthv7bwbq8ip7::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Props-Rocks.png<>uid://cslda4o38du0r::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png<>uid://3i74wg3n83xr::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Tree-Assets.png
+level1_home.tscn::PackedScene::7632527099461647610::1721246526::0::1::::<><>::res://levels/level_1/level1_home.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://ckxlxh4l724a::::res://assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png<>uid://3splw6bnuiww::::res://assets/uncolored_forest.png<>uid://xxaoff7gwbrm::::res://entities/player/player.tscn<>uid://cp3om70cuwqgl::::res://scenes/killzone.tscn<>uid://80l5qa3yt511::::res://ui/TransitionToBattle.tscn<>uid://uq02uwrlq78o::::res://entities/enemies/demise/demise.tscn<>uid://cw6ekyepny274::::res://entities/enemies/snail/snail.tscn<>uid://dlypta8rj8551::::res://audio/level1/Heaven.mp3<>res://levels/level_1/AudioStreamPlayer.gd
+::res://levels/level_1/battle/::1721246461
 battle_boss.gd::GDScript::-1::1721078292::0::1::::<>Node2D<>::
-battle_boss.tscn::PackedScene::9053490874609015403::1721218995::0::1::::<><>::res://levels/level_1/battle/battle_boss.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://uq02uwrlq78o::::res://entities/enemies/demise/demise.tscn<>uid://bdf7q0ossjqbt::::res://audio/boss_battle/Its_going_down_now.mp3<>uid://3splw6bnuiww::::res://assets/uncolored_forest.png
-battle_normal.gd::GDScript::-1::1721218365::0::1::::<>Node2D<>::
-battle_normal.tscn::PackedScene::155302642941618202::1721218995::0::1::::<><>::res://levels/level_1/battle/battle_normal.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://cw6ekyepny274::::res://entities/enemies/snail/snail.tscn<>uid://cyfthfkyonmnl::::res://entities/player/player_inbattle.tscn<>uid://cni3hdyo6oiwk::::res://audio/battle/Mass Destruction -Reload-.mp3
+battle_boss.tscn::PackedScene::9053490874609015403::1721246444::0::1::::<><>::res://levels/level_1/battle/battle_boss.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://uq02uwrlq78o::::res://entities/enemies/demise/demise.tscn<>uid://bdf7q0ossjqbt::::res://audio/boss_battle/Its_going_down_now.mp3<>uid://3splw6bnuiww::::res://assets/uncolored_forest.png
+battle_normal.gd::GDScript::-1::1721234777::0::1::::<>Node2D<>::
+battle_normal.tscn::PackedScene::155302642941618202::1721246461::0::1::::<><>::res://levels/level_1/battle/battle_normal.gd<>uid://chgphnvipg4x8::::res://levels/level_1/level1_home.tres<>uid://cw6ekyepny274::::res://entities/enemies/snail/snail.tscn<>uid://cni3hdyo6oiwk::::res://audio/battle/Mass Destruction -Reload-.mp3
 ::res://menus/::1721077887
-::res://scenes/::1721218365
+::res://scenes/::1721243228
 killzone.gd::GDScript::-1::1721033225::0::1::::<>Area2D<>::
 killzone.tscn::PackedScene::5884349785981746823::1721034897::0::1::::<><>::res://scenes/killzone.gd
 ::res://scenes/global/::1721218365
@@ -256,6 +255,7 @@ audio_player.tscn::PackedScene::8075555364343631384::1721218365::0::1::::<><>::
 scene_switcher.gd::GDScript::-1::1721218351::0::1::::<>Node<>::
 ::res://scenes/standard_camera/::1721218365
 StandardCamera.tscn::PackedScene::5713473370634729318::1721218365::0::1::::<><>::uid://80l5qa3yt511::::res://ui/TransitionToBattle.tscn
+::res://scenes/test/::1721246422
 ::res://ui/::1721218365
 TransitionToBattle.gd::GDScript::-1::1721218365::0::1::::<>Control<>::
 TransitionToBattle.tscn::PackedScene::2368563586322789662::1721218365::0::1::::<><>::res://ui/TransitionToBattle.gd

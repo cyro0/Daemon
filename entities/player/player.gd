@@ -3,6 +3,8 @@ extends CharacterBody2D
 class_name Player
 
 @export var speed : float = 200.0
+@export var in_battle : bool = false
+@export var battle_state : BattleState
 
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var animation_tree : AnimationTree = $AnimationTree
@@ -14,11 +16,15 @@ var direction : Vector2 = Vector2.ZERO
 
 func _ready():
 	animation_tree.active = true
+	if (in_battle):
+		state_machine.switch_states(battle_state)
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		
+	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -32,7 +38,9 @@ func _physics_process(delta):
 
 	move_and_slide()
 	update_animation_parameters()
-	update_facing_direction()
+	
+	if (state_machine.check_if_can_move()):
+		update_facing_direction()
 	
 func update_animation_parameters():
 	animation_tree.set("parameters/Move/blend_position", direction.x)
@@ -43,6 +51,7 @@ func update_facing_direction():
 	elif direction.x < 0:
 		sprite.flip_h = true
 
-
-func _on_snail_body_entered(body):
-	print("bruh")
+func make_player_walk(distance : int, speed : int):
+	pass
+	
+	

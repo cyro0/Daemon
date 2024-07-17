@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbunm8etultoc"]
+
+[ext_resource type="TileSet" uid="uid://chgphnvipg4x8" path="res://levels/level_1/level1_home.tres" id="1_62g5o"]
+[ext_resource type="PackedScene" uid="uid://xxaoff7gwbrm" path="res://entities/player/player.tscn" id="2_k8r3s"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_62g5o")
+format = 2
+layer_0/tile_data = PackedInt32Array(131071, 0, 9, 65540, 0, 9, 131066, 0, 9, 131061, 0, 9, 65545, 0, 9, 131056, 0, 9, 131051, 0, 9)
+
+[node name="Player" parent="." instance=ExtResource("2_k8r3s")]
+in_battle = true

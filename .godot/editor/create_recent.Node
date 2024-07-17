@@ -1,4 +1,6 @@
+TileMap
 Camera2D
+Node
 TextureRect
 Area2D
 Node2D
@@ -7,7 +9,6 @@ Marker2D
 AnimationTree
 Sprite2D
 CollisionShape2D
-Node
 AnimationPlayer
 AudioStreamPlayer
 AudioStreamPlayer2D
