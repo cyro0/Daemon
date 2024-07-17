@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneSwitcher="*res://scenes/global/scene_switcher.gd"
-TransitionHandler="*res://ui/Transition/TransitionHandler.gd"
+SwitchScene="*res://global/switch_scene.gd"
+AudioPlayer="*res://global/audio_player.gd"
 
 [display]
 

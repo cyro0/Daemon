@@ -122,6 +122,8 @@ position_smoothing_enabled = true
 
 [node name="TransitionToBattleNormal" parent="Player/StandardCamera" instance=ExtResource("6_oyug1")]
 visible = false
+res_path_normal_battle = "\"res://levels/level_1/battle/battle_normal.tscn\""
+res_path_boss_battle = "\"res://levels/level_1/battle/battle_boss.tscn\""
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -143,4 +145,5 @@ shape = SubResource("WorldBoundaryShape2D_o7b14")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_1jaqp")
 volume_db = -12.0
+autoplay = true
 script = ExtResource("11_ixnih")

@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://uq02uwrlq78o"]
+[gd_scene load_steps=7 format=3 uid="uid://uq02uwrlq78o"]
 
+[ext_resource type="Script" path="res://entities/enemies/demise/demise.gd" id="1_e0kx2"]
 [ext_resource type="Texture2D" uid="uid://dirkwgeml4lv2" path="res://assets/Bringer-Of-Death/Bringer-Of-Death/SpriteSheet/Bringer-of-Death-SpritSheet.png" id="1_qvn5x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nkt1i"]
@@ -44,8 +45,9 @@ _data = {
 "idle": SubResource("Animation_pahqg")
 }
 
-[node name="Demise" type="Area2D"]
+[node name="Demise" type="Area2D" groups=["boss_enemy"]]
 collision_mask = 2
+script = ExtResource("1_e0kx2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -39)
@@ -63,3 +65,5 @@ libraries = {
 "": SubResource("AnimationLibrary_jkoeg")
 }
 autoplay = "idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
